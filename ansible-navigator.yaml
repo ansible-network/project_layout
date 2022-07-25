@@ -1,0 +1,12 @@
+---
+ansible-navigator:
+  editor:
+    command: code -g {filename}:{line_number}
+    console: false
+  logging:
+    append: false
+    file: ./logs/ansible-navigator.log
+    level: debug
+  playbook-artifact:
+    enable: true
+    save-as: ./artifacts/{playbook_name}-artifact-{time_stamp}.json

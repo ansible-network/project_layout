@@ -1,0 +1,25 @@
+---
+collection:
+  path: ./collections/ansible_collections/project/local
+  namespace: project
+  name: local
+plugins:
+  # - type: action
+  #   name: custom_action
+  #   docstring: /path/to/docstring.yaml
+  
+  # - type: cache
+  #   name: custom_cache
+  #   docstring: /path/to/docstring.yaml
+  
+  - type: filter
+    name: echo
+    docstring: ./plugin_builder/filter/echo.yaml
+
+  # - type: test
+  #   name: custom_test
+  #   docstring: /path/to/docstring.yaml
+  
+  # - type: lookup
+  #   name: custom_lookup
+  #   docstring: /path/to/docstring.yaml

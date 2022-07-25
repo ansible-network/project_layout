@@ -1,2 +1,12 @@
+# The ansible-navigator artificat directory as specified in the ansible-navigator.yaml settings file
+artifacts/
+# The ansible-navigator log directory as specified in the ansible-navigator.yaml settings file
+logs/
+# The local virtual environment
 venv/
+# The remote collections, listed individually
+# to ensure the project.local collection part of the repository
+# This typically includes the collections found in the collections/requirements.yaml file
+# ans may also include collection only necessary for development
 collections/ansible_collections/ansible/utils/
+collections/ansible_collections/ansible.plugin_builder

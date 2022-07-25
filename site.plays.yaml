@@ -1,0 +1,20 @@
+- hosts: localhost
+  gather_facts: false
+  vars:
+    left:
+      a: 1
+    right:
+      a: 2
+  tasks:
+  - name: Use the project local echo filter plugin
+    set_fact:
+      unchanged: "{{ left | project.local.echo }}"
+  
+  - name: Confirm the project local filter plugin is wroking
+    assert:
+      that: "{{ left.a == unchanged.var.a }}"
+
+  - name: Compare 2 facts
+    ansible.utils.fact_diff:
+      before: "{{ left }}"
+      after: "{{ right }}"

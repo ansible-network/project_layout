@@ -1,0 +1,6 @@
+---
+# This is the playbook used to generate the ansible plugin builder plugins
+- hosts: localhost
+  gather_facts: true
+  roles:
+    - ansible.plugin_builder.run

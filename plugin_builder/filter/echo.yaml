@@ -1,0 +1,13 @@
+name: echo
+author: Bradley Thornton (@cidrblock)
+version_added: "1.0.0"
+short_description: Return the provided value unmodified
+description:
+    - Return the provided value unmodified
+ 
+options:
+  var:
+    description:
+    - The value to be returned
+    type: raw
+    required: True

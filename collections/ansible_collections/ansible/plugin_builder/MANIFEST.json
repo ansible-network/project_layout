@@ -1,0 +1,29 @@
+{
+ "collection_info": {
+  "namespace": "ansible",
+  "name": "plugin_builder",
+  "version": "0.0.1",
+  "authors": [
+   "Brad Thornton (@cidrblock)",
+   "Nilashish Chakraborty (@NilashishC)"
+  ],
+  "readme": "README.md",
+  "tags": [],
+  "description": "your collection description",
+  "license": [],
+  "license_file": "LICENSE",
+  "dependencies": {},
+  "repository": "https://github.com/ansible-collections/ansible.plugin_builder",
+  "documentation": null,
+  "homepage": null,
+  "issues": "https://github.com/ansible-collections/ansible.plugin_builder/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "4d0e48889198d82500f5dd0d2f57040248c88dd036e4a730091599484f7e5611",
+  "format": 1
+ },
+ "format": 1
+}

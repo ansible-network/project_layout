@@ -1,0 +1,88 @@
+{
+    "description": "JSON Schema for Ansible Plugin Builder MANIFEST",
+    "title": "Ansible Plugin Builder MANIFEST Schema",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "collection": {
+            "type": "object",
+            "properties": {
+                "path": {
+                    "type": "string"
+                },
+                "namespace": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "path",
+                "namespace",
+                "name"
+            ]
+        },
+        "license_file": {
+            "type": "string"
+        },
+        "plugins": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "type": "string",
+                        "enum": [
+                            "cache",
+                            "action",
+                            "filter",
+                            "test",
+                            "lookup",
+                            "module_network_cli",
+                            "module_network_netconf",
+                            "module_security_httpapi"
+                        ]
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "docstring": {
+                        "type": "string"
+                    },
+                    "overwrite": {
+                        "type": "boolean"
+                    },
+                    "resource": {
+                        "type": "string"
+                    }
+                },
+                "allOf": [
+                    {
+                        "if": {
+                            "properties": {
+                                "type": {
+                                    "enum": [
+                                        "module_network_cli",
+                                        "module_network_netconf"
+                                    ]
+                                }
+                            }
+                        },
+                        "then": {
+                            "required": [
+                                "resource"
+                            ]
+                        }
+                    }
+                ],
+                "required": [
+                    "name",
+                    "type"
+                ],
+                "additionalProperties": false
+            }
+        }
+    },
+    "additionalProperties": false
+}
