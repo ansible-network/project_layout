@@ -1,0 +1,8 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+  - ansible.utils.fact_diff:
+      before:
+        a: 1
+      after:
+        a: 2
